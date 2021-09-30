@@ -1,0 +1,47 @@
+.card-body{
+  width: 100%;
+  color: black;
+  list-style: none;
+  
+}
+
+.card h1 {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card-body button {
+  border: none;
+  width: 100%;
+  background-color: blueviolet;
+  cursor: pointer;
+  color: white;
+  padding: 1rem;
+  
+}
+.card-body button:hover{
+  background-color: rgb(178, 95, 255);
+
+ 
+}
+
+
+
+.card{
+  box-shadow: 0.3rem 0.3rem rgb(209, 209, 209);
+  max-width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5rem;
+  padding-top: 1rem;
+  border: 1px solid rgb(77, 77, 80);
+}
+
+.card:hover{
+  border: 0.1rem solid rgb(12, 196, 241);
+}

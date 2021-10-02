@@ -1,6 +1,14 @@
 .cardItem {
-    border: 1px solid gray;
-    background-color: azure;
+    width: 50rem;
+    border: 1px solid rgb(131, 131, 131);
+    background-color: rgb(247, 245, 245);
+    margin: 0.3rem;
+    padding: 0.3rem;
+    border-radius: 5px;
+}
+
+.cardItem span {
+    padding: 0.3rem;
 }
 
 .cardItem li {
@@ -8,6 +16,48 @@
 }
 
 .cardItem button {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    background-color: rgb(225, 222, 226);
+    border-radius: 4px;
+}
+
+.cardItem button li {
+    display: inline;
+}
+
+.small {
+    max-width: 7rem;
+}
+
+.add {
+    color: green;
+}
+
+.remove {
+    color: red;
+}
+
+.cartContainer{
+    display: flex;
+    background-color: aquamarine;
+
+}
+
+.checkout{
+    border: none;
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+.checkout:hover{
+    background-color: green;
+    color: white;
+}
+.priceContainer{
+    border: 1px solid gray;
+    padding: 0.4rem;
+    display: flex;
+    justify-content: space-between;
 }

@@ -1,0 +1,13 @@
+.cardItem {
+    border: 1px solid gray;
+    background-color: azure;
+}
+
+.cardItem li {
+    list-style: none;
+}
+
+.cardItem button {
+    width: 2rem;
+    height: 2rem;
+}

@@ -1,17 +1,20 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import HomePage from './Pages/HomePage';
 
 function App() {
+ 
   return (
 
     <BrowserRouter>
       <div className="grid-container">
     <header className="row">
-      <div >
-        <a className="logo" href="/">
+      <div className="logo" >
+        <a href="/">
           GamerLand
         </a>
+        <img src="/assets/2923485.svg"/>
+       
       </div>
       <div className="cart">
         <a href="/cart">Carrinho</a>
@@ -20,7 +23,7 @@ function App() {
      
     </header>
     <main>
-      <div><HomePage /></div>
+      <Route path="/"   component={HomePage}></Route>  
     </main>
 
     <footer className="row center" > todos os direitos reservados  -</footer>
@@ -31,4 +34,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;     

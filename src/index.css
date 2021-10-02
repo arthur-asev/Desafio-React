@@ -34,11 +34,15 @@ header {
   background-color: #7112b1;
 }
 
-.logo {
+.logo a{
   padding: 1rem;
   font-size: 2rem;
   color: #ffffff;
   font-weight: bolder;
+}
+
+.logo img {
+  width: 5rem;
 }
 
 .cart a {
@@ -49,9 +53,8 @@ header {
 }
 
 .cart img {
-  max-width: 5rem;
+  max-width: 3.7rem;
   width: 4.0rem;
-  height: auto;
 }
 
 main {
@@ -65,19 +68,24 @@ footer {
   color: #ffffff;
 }
 
-a{text-decoration: none;}
+a {
+  text-decoration: none;
+}
+
 .cart {
   padding: 1rem;
   display: flex;
 }
 
 .row {
-  display: flex;
   flex-wrap: wrap;
+  display: flex;
   justify-content: space-between;
-  align-items: center;
+  -ms-flex-align: baseline;
+
 }
 
 .row.center {
+  padding-top: 1.5rem;
   justify-content: center;
 }

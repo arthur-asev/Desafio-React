@@ -3,11 +3,11 @@ import React from "react";
 import { useCart } from "../context/Cart";
 
 export default function ProductDetails() {
-  const { products, onAdd } = useCart([]);
+  const { cartItems, onAdd } = useCart([]);
 
   return (
     <div className="card">
-      {products.map((product) => (
+      {cartItems.map((product) => (
         <ul key={product.id} product={product}>
           <img
             className="large"

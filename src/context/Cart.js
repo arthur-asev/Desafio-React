@@ -9,7 +9,6 @@ export default function Cart({ children }) {
 
   const onAdd = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
-
     if (exist) {
       setCartItems(
         cartItems.map((x) =>

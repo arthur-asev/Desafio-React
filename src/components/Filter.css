@@ -1,36 +1,27 @@
-.filter{
+.filter {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     padding: 1rem;
-    border-bottom:2px solid rgb(225, 219, 219) ;
-
+    border-bottom: 2px solid rgb(225, 219, 219);
 }
 
-
-.filter select{
-    padding: 0.3rem;
-    border-radius: 4px;
+.filter select {
     appearance: none;
+    border-radius: 4px;
     background-color: transparent;
-    border: none;
-    margin: 0;
-    width: 100%;
-    font-family: inherit;
-    font-size: inherit;
+    width: 25%;
     cursor: pointer;
     line-height: inherit;
-    background-color: #7112b1;
+    background-color: #8b33c5;
     text-align: center;
     padding: 0.5rem;
     color: white;
 }
 
-
-
-.filter-result{
+.filter-result {
     color: rgb(21, 20, 20);
 }
 
 .filter {
     grid-area: filter;
-  }
+}

@@ -6,7 +6,7 @@ import "./Product.css";
 export default function Product({ product, onAdd }) {
   return (
     <div key={product.id} className="card">
-      <Link to={`/productdetails/${product.id}`}>
+      <Link to={`/product/${product.id}`}>
         <img
           className="medium"
           src={"/assets/" + product.image}

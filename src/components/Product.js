@@ -5,7 +5,8 @@ import './Product.css';
 
 
 export default function Product(props) {
-    const {product,onAdd} = props
+    
+  const {product,onAdd} = props
       
     return (
   

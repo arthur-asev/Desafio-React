@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Product from '../components/Product';
+import React, { useEffect, useState } from 'react';
 import Basket from '../components/Basket';
+import Product from '../components/Product';
 
 export default function HomePage() {
     const [products, setProducts] = useState([]);
@@ -12,9 +12,9 @@ export default function HomePage() {
         const exist = cartItems.find( (x) => x.id === product.id );
         
         if (exist){
-            setCartItems(cartItems.map( (x) => x.id === product.id ? {...exist, qty:exist.qty + 1 } : x ))
+            setCartItems(cartItems.map( (x) => x.id === product.id ? {...exist, qty:exist.qty + 1 , frete:exist.frete + 10} : x ))
         } else{
-          setCartItems([...cartItems,{...product,qty: + 1}])
+          setCartItems([...cartItems,{...product,qty: + 1, frete:+ 10}])
         }
     }
 
@@ -25,7 +25,7 @@ export default function HomePage() {
         } else {
           setCartItems(
             cartItems.map((x) =>
-              x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
+              x.id === product.id ? { ...exist, qty: exist.qty - 1 , frete:exist.frete - 10} : x
             )
           );
         }
@@ -39,11 +39,11 @@ export default function HomePage() {
             fetchData();
     },[])
 
-    
     return (
        
         <div>
             <div className="row center">
+   
                 {products.map((product) => (
                     <Product onAdd={onAdd} key={product.id} product={product}></Product>
                 ))}

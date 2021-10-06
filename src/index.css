@@ -9,7 +9,6 @@ html {
 }
 
 body {
-  margin: 0;
   height: 100vh;
   font-size: 1.6rem;
   font-family: Helvetica, Arial, sans-serif;
@@ -29,33 +28,6 @@ body {
   height: 100%;
 }
 
-header {
-  grid-area: header;
-  background-color: #7112b1;
-}
-
-.logo a{
-  padding: 1rem;
-  font-size: 2rem;
-  color: #ffffff;
-  font-weight: bolder;
-}
-
-.logo img {
-  width: 5rem;
-}
-
-.cart a {
-  padding: 0.5rem;
-  color: white;
-  font-size: medium;
-  font-weight: bolder;
-}
-
-.cart img {
-  max-width: 3.7rem;
-  width: 4.0rem;
-}
 
 main {
   grid-area: main;
@@ -70,11 +42,6 @@ footer {
 
 a {
   text-decoration: none;
-}
-
-.cart {
-  padding: 1rem;
-  display: flex;
 }
 
 .row {

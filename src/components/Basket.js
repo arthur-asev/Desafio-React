@@ -5,9 +5,10 @@ import './Basket.css';
 export default function Basket(props) {
     const {cartItems ,onAdd ,onRemove} = props;
     const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.price, 0);
-    let frete = 10;
-    const totalPrice = itemsPrice + frete;
-    console.log(cartItems)
+    let frete = cartItems.reduce((a, b) => a + b.frete, 0 )
+    const total = itemsPrice ;
+    total >= 250 ? frete = 0 : total
+    
     return (
         <div>
             {cartItems.length === 0 && <h1>O carrinho está vazio</h1>}
@@ -36,10 +37,9 @@ export default function Basket(props) {
                Frete:${frete.toFixed(2)}
               </div>
             </div>
-
             <div>
               <div>
-                <strong>Total:${totalPrice.toFixed(2)}</strong>
+                <strong>Total:R$:{(total+frete).toFixed(2) }</strong>
               </div>
             </div>
             <div>

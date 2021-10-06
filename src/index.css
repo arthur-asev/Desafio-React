@@ -56,3 +56,11 @@ a {
   padding-top: 1.5rem;
   justify-content: center;
 }
+
+.container{display: flex;}
+
+.product-container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow:padding ;
+}

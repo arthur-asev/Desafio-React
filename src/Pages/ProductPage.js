@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import Filter from '../components/Filter';
 import Product from '../components/Product';
 
 export default function HomePage(props) {
@@ -15,10 +16,10 @@ export default function HomePage(props) {
       }
   }
     return (
-       
-        <div>
+      
+        <div><Filter></Filter>
             <div className="row center">
-   
+            
                 {products.map((product) => (
                     <Product onAdd={onAdd} key={product.id} product={product}></Product>
                 ))}

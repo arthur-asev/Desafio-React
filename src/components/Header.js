@@ -18,10 +18,12 @@ export default function Header(props) {
        
       </div>
       <div className="cart">
-        <Link to="/cart">Cart{' '}
+        <Link to="/cart"><img src="/assets/cart-icon.svg"/>{' '}
           {countCartItems ? (
-            <button className="badge">{countCartItems}</button>) : ('')}</Link>{''}
-        <img src="/assets/cart-icon.svg"/>
+            <button className="badge">{countCartItems}</button>) : ('')}
+         
+            </Link>{''}
+            
       </div>
      
     </header>

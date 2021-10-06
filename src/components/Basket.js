@@ -2,8 +2,11 @@
 import React from "react";
 import { useCart } from "../context/Cart";
 import "./Basket.css";
+import ToastAnimated, { showToast } from "../ui-lib/toast.js";
 
 export default function Basket() {
+  const handleSucces = () =>
+    showToast({ type: "success", message: "Compra feita com sucesso" });
   const { cartItems, setCartItems, onAdd, onRemove } = useCart([]);
   const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.price, 0);
   let frete = cartItems.reduce((a, b) => a + b.frete, 0);
@@ -12,6 +15,7 @@ export default function Basket() {
 
   return (
     <div>
+      <ToastAnimated />
       {cartItems.length === 0 && (
         <h1 className="cart-text">O carrinho está vazio</h1>
       )}
@@ -37,7 +41,7 @@ export default function Basket() {
               </button>
             </span>
             <li>
-              {item.qty}x {item.price.toFixed(2)}
+              {item.qty}x R$:{item.price.toFixed(2)}
             </li>
           </ul>
         </div>
@@ -57,7 +61,7 @@ export default function Basket() {
             </button>
           </div>
           <div>
-            <div className="frete">Frete:${frete.toFixed(2)}</div>
+            <div className="frete">Frete:R${frete.toFixed(2)}</div>
           </div>
           <div>
             <div className="total">
@@ -65,10 +69,7 @@ export default function Basket() {
             </div>
           </div>
           <div>
-            <button
-              className="checkout"
-              onClick={() => alert("Implement Checkout!")}
-            >
+            <button className="checkout" onClick={handleSucces}>
               Finalizar compra
             </button>
           </div>

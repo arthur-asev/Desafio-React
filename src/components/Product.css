@@ -1,11 +1,11 @@
-.card-body{
+.card-body {
   width: 100%;
   color: black;
   list-style: none;
-  
 }
 
 .card h1 {
+  padding: 0.2rem;
   text-align: center;
   font-size: 1rem;
 }
@@ -21,17 +21,13 @@
   cursor: pointer;
   color: white;
   padding: 1rem;
-  
 }
-.card-body button:hover{
+
+.card-body button:hover {
   background-color: rgb(178, 95, 255);
-
- 
 }
 
-
-
-.card{
+.card {
   box-shadow: 0.3rem 0.3rem rgb(209, 209, 209);
   max-width: 20rem;
   display: flex;
@@ -42,6 +38,6 @@
   border: 1px solid rgb(77, 77, 80);
 }
 
-.card:hover{
+.card:hover {
   border: 0.1rem solid rgb(12, 196, 241);
 }

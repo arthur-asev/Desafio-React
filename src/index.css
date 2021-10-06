@@ -64,3 +64,9 @@ a {
   flex-wrap: wrap;
   flex-grow:padding ;
 }
+
+.footer{
+  display: flex;
+  padding-top: 1.5rem;
+  justify-content: center;
+}

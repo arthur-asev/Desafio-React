@@ -3,6 +3,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Header.css'
 
+
 export default function Header(props) {
 
     const {countCartItems} = props
@@ -22,7 +23,7 @@ export default function Header(props) {
           {countCartItems ? (
             <button className="badge">{countCartItems}</button>) : ('')}
          
-            </Link>{''}
+        </Link>{''}
             
       </div>
      

@@ -1,9 +1,11 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { useCart } from '../context/Cart';
 import './Basket.css';
 
-export default function Basket(props) {
-    const {cartItems ,onAdd ,onRemove} = props;
+export default function Basket() {
+    
+    const {cartItems, setCartItems,onAdd, onRemove} = useCart([])
     const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.price, 0);
     let frete = cartItems.reduce((a, b) => a + b.frete, 0 )
     const total = itemsPrice ;
@@ -42,6 +44,10 @@ export default function Basket(props) {
                 <strong>Total:R$:{(total+frete).toFixed(2) }</strong>
               </div>
             </div>
+            <div> <button className="cleanCart" onClick={() => setCartItems(cartItems.filter((x) => x.length = 0))} >
+             Limpar Carrinho
+              </button>
+              </div>
             <div>
               <button className="checkout" onClick={() => alert('Implement Checkout!')}>
                 Finalizar compra

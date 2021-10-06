@@ -1,44 +1,39 @@
 /* eslint-disable react/prop-types */
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Route,Switch } from 'react-router-dom';
-import Header from './components/Header';
-import ProductPage from './Pages/ProductPage';
-import CartPage  from './Pages/CartPage';
-import ProductDetails from './Pages/ProductDetails';
+import axios from "axios";
+import React, { useEffect } from "react";
+import { BrowserRouter } from "react-router-dom";
+import Header from "./components/Header";
+import { useCart } from "./context/Cart";
+import Routes from "./Routes";
 
 function App() {
-  
-  const [products, setProducts] = useState([]);
-  const [cartItems,setCartItems] = useState([]);
-  
+  const { cartItems, setProducts } = useCart([]);
+
   useEffect(() => {
     const fetchData = async () => {
-        const {data} = await axios.get('products.json');
-        setProducts(data);
+      const { data } = await axios.get("products.json");
+      setProducts(data);
     };
     fetchData();
-},[])
+  }, []);
 
   return (
+    <>
+      <BrowserRouter>
+        <Header countCartItems={cartItems.length}></Header>
+        <Routes />
 
-    <BrowserRouter>
-      <div className="grid-container">
-    <Header countCartItems={cartItems.length} ></Header>
-    <main>
-      <Switch>
-      <Route path="/"  exact component={ProductPage}><ProductPage products={products} setProducts={setProducts} setCartItems={setCartItems} cartItems={cartItems}></ProductPage></Route>
-      <Route path="/productdetails/" component={ProductDetails}></Route>  
-      <Route path="/cart/" component={CartPage}><CartPage cartItems={cartItems} setCartItems={setCartItems}></CartPage></Route>
-      </Switch>
-    </main>
+        <div className="grid-container">
+          <main></main>
 
-    <footer className="row center" > todos os direitos reservados  - ao criador </footer>
-       
-    </div>
-       
-    </BrowserRouter>
+          <footer className="footer">
+            {" "}
+            todos os direitos reservados - ao criador{" "}
+          </footer>
+        </div>
+      </BrowserRouter>
+    </>
   );
 }
 
-export default App;     
+export default App;

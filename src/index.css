@@ -10,7 +10,6 @@ html {
 
 body {
   height: 100vh;
-  font-size: 1.6rem;
   font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -27,7 +26,6 @@ body {
   grid-template-rows: 5rem 1fr 5rem;
   height: 100%;
 }
-
 
 main {
   grid-area: main;
@@ -49,7 +47,6 @@ a {
   display: flex;
   justify-content: space-between;
   -ms-flex-align: baseline;
-
 }
 
 .row.center {
@@ -57,15 +54,17 @@ a {
   justify-content: center;
 }
 
-.container{display: flex;}
-
-.product-container{
+.container {
   display: flex;
-  flex-wrap: wrap;
-  flex-grow:padding ;
 }
 
-.footer{
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: padding;
+}
+
+.footer {
   display: flex;
   padding-top: 1.5rem;
   justify-content: center;

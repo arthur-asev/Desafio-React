@@ -18,7 +18,7 @@ GamerLand é uma loja de venda de jogo criada a partir de um desafio proposto pe
 ## 🚀 Deploy
 
 O deploy da aplicação foi feito no link abaixo:
-https://615e225bf7e57d0a42fb64c7--gamerland.netlify.app
+https://gamerland.netlify.app
 
 ## 🚀 Tecnologias
 
